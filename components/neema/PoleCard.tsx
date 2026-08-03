@@ -2,9 +2,21 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Pole } from "@/lib/poles";
 
-export function PoleCard({ pole }: { pole: Pole }) {
+export function PoleCard({ pole, index }: { pole: Pole; index?: number }) {
   return (
-    <Link href={`/poles/${pole.slug}`} className="card p-6 flex flex-col gap-3 group">
+    <Link
+      href={`/poles/${pole.slug}`}
+      className="card relative p-6 flex flex-col gap-3 group transition-transform duration-200 hover:-translate-y-1"
+    >
+      {typeof index === "number" && (
+        <span
+          className="absolute top-5 right-5 text-xs font-black"
+          style={{ color: "var(--color-border)" }}
+          aria-hidden="true"
+        >
+          {String(index + 1).padStart(2, "0")}
+        </span>
+      )}
       <Image
         src={pole.logo}
         alt={pole.name}

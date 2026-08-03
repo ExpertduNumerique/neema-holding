@@ -29,8 +29,8 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {poles.map((pole) => (
-              <PoleCard key={pole.slug} pole={pole} />
+            {poles.map((pole, i) => (
+              <PoleCard key={pole.slug} pole={pole} index={i} />
             ))}
           </div>
         </div>
@@ -39,8 +39,13 @@ export default function Home() {
       <ApproachSection />
 
       {/* ── Devise ── */}
-      <section className="section-navy text-white">
-        <div className="container-neema py-16 sm:py-20 text-center">
+      <section className="relative section-navy text-white overflow-hidden">
+        <div
+          className="absolute -top-24 left-1/2 -translate-x-1/2 w-[36rem] h-[36rem] rounded-full pointer-events-none"
+          style={{ background: "radial-gradient(circle, rgba(34,184,99,.12), transparent 70%)" }}
+          aria-hidden="true"
+        />
+        <div className="container-neema relative py-16 sm:py-20 text-center">
           <p className="text-xl sm:text-3xl font-bold max-w-2xl mx-auto">
             « Unir les forces, créer la valeur, <span style={{ color: "#22B863" }}>bâtir l&apos;avenir</span>. »
           </p>

@@ -3,8 +3,20 @@ import Image from "next/image";
 
 export function HeroSection() {
   return (
-    <section className="bg-white overflow-hidden pt-12 pb-16 sm:pt-16 sm:pb-20" aria-labelledby="hero-title">
-      <div className="container-neema">
+    <section className="relative bg-white overflow-hidden pt-12 pb-16 sm:pt-16 sm:pb-24" aria-labelledby="hero-title">
+      {/* Dégradés décoratifs */}
+      <div
+        className="absolute -top-32 -right-32 w-[28rem] h-[28rem] rounded-full pointer-events-none"
+        style={{ background: "radial-gradient(circle, rgba(26,102,255,.12), transparent 70%)" }}
+        aria-hidden="true"
+      />
+      <div
+        className="absolute -bottom-24 -left-24 w-80 h-80 rounded-full pointer-events-none"
+        style={{ background: "radial-gradient(circle, rgba(18,161,80,.1), transparent 70%)" }}
+        aria-hidden="true"
+      />
+
+      <div className="container-neema relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* ── Colonne gauche : texte ── */}
@@ -57,7 +69,36 @@ export function HeroSection() {
                 <p className="text-xs text-gray-500 leading-tight">Un seul groupe</p>
               </div>
             </div>
+            <div
+              className="hidden sm:flex absolute -top-5 -right-5 items-center gap-2 bg-white rounded-2xl shadow-xl px-4 py-3"
+              style={{ border: "1px solid var(--color-border)" }}
+            >
+              <span
+                className="w-8 h-8 rounded-full flex items-center justify-center shrink-0"
+                style={{ backgroundColor: "rgba(18,161,80,.12)", color: "#12A150" }}
+                aria-hidden="true"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>
+              </span>
+              <p className="text-sm font-bold text-navy-900 leading-tight">Impact durable</p>
+            </div>
           </div>
+        </div>
+
+        {/* ── Repère de défilement ── */}
+        <div className="hidden sm:flex justify-center mt-14">
+          <a
+            href="#nos-poles"
+            aria-label="Voir nos pôles"
+            className="w-10 h-10 rounded-full flex items-center justify-center transition-colors hover:bg-gray-100"
+            style={{ border: "1px solid var(--color-border)", color: "#6B7280" }}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4" aria-hidden="true">
+              <path d="m19 9-7 7-7-7" />
+            </svg>
+          </a>
         </div>
       </div>
     </section>
