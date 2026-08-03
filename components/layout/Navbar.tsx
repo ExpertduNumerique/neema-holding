@@ -64,8 +64,9 @@ export function Navbar() {
             className="shrink-0"
             priority
           />
-          <span className="text-white font-black text-base tracking-tight leading-none hidden sm:inline">
-            Neema<span style={{ color: "#22B863" }}>Holding</span>
+          <span className="font-black text-base tracking-tight leading-none hidden sm:inline">
+            <span style={{ color: "#4785FF" }}>Neema</span>{" "}
+            <span style={{ color: "#22B863" }}>Holding</span>
           </span>
         </Link>
 

@@ -76,8 +76,9 @@ export function Footer() {
                 height={36}
                 className="shrink-0"
               />
-              <span className="font-bold text-lg" style={{ color: "#fff" }}>
-                Neema<span style={{ color: "#22B863" }}>Holding</span>
+              <span className="font-bold text-lg">
+                <span style={{ color: "#4785FF" }}>Neema</span>{" "}
+                <span style={{ color: "#22B863" }}>Holding</span>
               </span>
             </Link>
             <p className="text-sm leading-relaxed mb-5" style={{ color: "rgba(255,255,255,0.5)", maxWidth: "300px" }}>
