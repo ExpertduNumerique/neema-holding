@@ -14,6 +14,7 @@ export const POLE_ICON_COLORS: Record<string, { bg: string; color: string }> = {
   immo: { bg: "rgba(11,42,102,.1)", color: "#0B2A66" },
   store: { bg: "rgba(9,94,43,.1)", color: "#095E2B" },
   groupe: { bg: "rgba(255,255,255,.1)", color: "#94A3B8" },
+  equipe: { bg: "rgba(18,161,80,.1)", color: "#12A150" },
 };
 
 export const POLE_ICONS: Record<string, ReactNode> = {
@@ -30,6 +31,14 @@ export const POLE_ICONS: Record<string, ReactNode> = {
       <path d="M4 21V5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v16" />
       <path d="M12 21V9a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v12" />
       <path d="M4 21h16M7.5 8h.01M7.5 12h.01M7.5 16h.01M15.5 12h.01M15.5 16h.01" />
+    </svg>
+  ),
+  // Notre Équipe — deux personnes
+  equipe: (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5" aria-hidden="true">
+      <path d="M17 20v-1a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v1" />
+      <circle cx="7" cy="8" r="3" />
+      <path d="M21 20v-1a4 4 0 0 0-3-3.87M14.5 4.13a4 4 0 0 1 0 7.75" />
     </svg>
   ),
   // Élevage — tête de bovin (cornes, oreilles, museau)

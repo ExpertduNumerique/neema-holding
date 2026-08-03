@@ -37,7 +37,17 @@ export function Footer() {
   const NAV_LINKS = [
     { href: "/", label: "Accueil" },
     { href: "/notre-groupe", label: "Notre Groupe" },
+    { href: "/notre-equipe", label: "Notre Équipe" },
+    { href: "/actualites", label: "Actualités" },
+    { href: "/partenaires", label: "Partenaires" },
+    { href: "/presse", label: "Presse & Kit média" },
     { href: "/contact", label: "Contact" },
+  ];
+
+  const LEGAL_LINKS = [
+    { href: "/mentions-legales", label: "Mentions légales" },
+    { href: "/cgu", label: "CGU" },
+    { href: "/confidentialite", label: "Confidentialité" },
   ];
 
   const linkClass = "text-sm transition-colors duration-200 hover:text-white";
@@ -89,7 +99,7 @@ export function Footer() {
           </div>
 
           {/* ─ Nos pôles ─ */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-2">
             <h3 style={headingStyle}>Nos pôles</h3>
             <ul className="space-y-2.5">
               {poles.map((pole) => (
@@ -103,7 +113,7 @@ export function Footer() {
           </div>
 
           {/* ─ Navigation ─ */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-3">
             <h3 style={headingStyle}>Navigation</h3>
             <ul className="space-y-2.5">
               {NAV_LINKS.map((link) => (
@@ -148,9 +158,23 @@ export function Footer() {
       </div>
 
       <div className="container-neema py-4" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-        <p className="text-xs text-center" style={{ color: "rgba(255,255,255,0.3)" }}>
-          © {year} Neema Holding International — Tous droits réservés.
-        </p>
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-xs" style={{ color: "rgba(255,255,255,0.3)" }}>
+            © {year} Neema Holding International — Tous droits réservés.
+          </p>
+          <div className="flex items-center gap-4">
+            {LEGAL_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-xs transition-colors duration-200 hover:text-white"
+                style={{ color: "rgba(255,255,255,0.3)" }}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
     </footer>
   );

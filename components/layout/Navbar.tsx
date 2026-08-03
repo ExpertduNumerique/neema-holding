@@ -26,17 +26,18 @@ const directLinks: NavLink[] = [
   ...directPoles.map((p) => ({ href: `/poles/${p.slug}`, label: p.shortName, iconId: p.iconId })),
 ];
 
-const plusLinks: NavLink[] = plusPoles.map((p) => ({
-  href: `/poles/${p.slug}`,
-  label: p.shortName,
-  iconId: p.iconId,
-}));
+const plusLinks: NavLink[] = [
+  ...plusPoles.map((p) => ({ href: `/poles/${p.slug}`, label: p.shortName, iconId: p.iconId })),
+  { href: "/notre-equipe", label: "Notre Équipe", iconId: "equipe" },
+];
 
-// Ordre naturel complet (Accueil + les 6 pôles) pour le tiroir mobile,
-// où l'espace vertical permet de tout afficher sans distinction "Plus".
+// Ordre naturel complet (Accueil + les 6 pôles + Notre Équipe) pour le
+// tiroir mobile, où l'espace vertical permet de tout afficher sans
+// distinction "Plus".
 const mobileLinks: NavLink[] = [
   { href: "/", label: "Accueil", iconId: "accueil" },
   ...poles.map((p) => ({ href: `/poles/${p.slug}`, label: p.shortName, iconId: p.iconId })),
+  { href: "/notre-equipe", label: "Notre Équipe", iconId: "equipe" },
 ];
 
 export function Navbar() {
