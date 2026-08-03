@@ -132,4 +132,13 @@
   .section-navy {
     background-color: var(--color-navy-900);
   }
+
+  /* ── Carrousel horizontal (masque la scrollbar native) ── */
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }

@@ -1,9 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { poles } from "@/lib/poles";
-import { PoleCard } from "@/components/neema/PoleCard";
 import { HeroSection } from "@/components/home/HeroSection";
 import { TrustBar } from "@/components/home/TrustBar";
+import { PolesCarousel } from "@/components/home/PolesCarousel";
 import { ApproachSection } from "@/components/home/ApproachSection";
 
 export const metadata: Metadata = {
@@ -18,21 +17,9 @@ export default function Home() {
       <TrustBar />
 
       {/* ── Nos pôles ── */}
-      <section id="nos-poles" className="py-20 sm:py-24" style={{ backgroundColor: "#F9FAFB" }}>
+      <section id="nos-poles" className="py-20 sm:py-24 overflow-hidden" style={{ backgroundColor: "#F9FAFB" }}>
         <div className="container-neema">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-navy-900">Nos pôles</h2>
-            <p className="mt-3 text-gray-600">
-              Six secteurs complémentaires réunis au sein d&apos;une même vision : contribuer
-              à la croissance des entreprises, accompagner les communautés et favoriser un
-              développement responsable.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {poles.map((pole, i) => (
-              <PoleCard key={pole.slug} pole={pole} index={i} />
-            ))}
-          </div>
+          <PolesCarousel />
         </div>
       </section>
 
