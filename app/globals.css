@@ -1,26 +1,135 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+ * Charte graphique Neema Holding International — voir AGENTS.md §4.
+ * Couleurs de marque exactes extraites du logo officiel :
+ *   --color-neema-blue  : #1A66FF (logo, wordmark)
+ *   --color-neema-green : #095E2B (logo, wordmark)
+ * Teintes UI dérivées (fond header/footer, accents CTA) choisies pour un
+ * bon contraste avec le blanc, dans la même logique que recaptech
+ * (fond marine foncé + accent vif) :
+ *   --color-navy-*  : bleu marine dérivé de #1A66FF, pour header/footer/hero
+ *   --color-accent-*: vert dérivé de #095E2B, pour CTA/liens actifs/hover
+ */
+@theme {
+  /* Bleu marine (dérivé du bleu Neema #1A66FF) — fonds foncés */
+  --color-navy-950: #050f2b;
+  --color-navy-900: #0B2A66;
+  --color-navy-800: #123B85;
+  --color-navy-700: #1A4FA6;
+  --color-navy-600: #1A66FF;
+  --color-navy-500: #4785FF;
+  --color-navy-100: #DCE7FF;
+  --color-navy-50:  #F0F5FF;
+
+  /* Vert (dérivé du vert Neema #095E2B) — CTA, accents, liens actifs */
+  --color-accent-900: #095E2B;
+  --color-accent-700: #0C7A38;
+  --color-accent-600: #12A150;
+  --color-accent-500: #22B863;
+  --color-accent-100: #D9F5E3;
+  --color-accent-50:  #EFFCF3;
+
+  /* Fond sections / neutres */
+  --color-section: #F0F5FF;
+  --color-light: #F9FAFB;
+  --color-border: #E5E7EB;
+  --color-gray: #6B7280;
+  --color-gray-light: #D1D5DB;
+
+  --radius-card: 1rem;
+  --shadow-card: 0 1px 3px rgba(11, 42, 102, 0.08), 0 1px 2px rgba(11, 42, 102, 0.04);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    color: var(--color-navy-900);
+    background-color: #ffffff;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  button, [role="button"] {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-navy-600);
+    outline-offset: 2px;
+    border-radius: 4px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* ── Conteneur responsive (équivalent .container-recap) ── */
+  .container-neema {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  @media (min-width: 640px)  { .container-neema { padding-left: 24px; padding-right: 24px; } }
+  @media (min-width: 1024px) { .container-neema { padding-left: 32px; padding-right: 32px; } }
+
+  /* ── Boutons ── */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    border: 1px solid transparent;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 44px;
+  }
+  .btn-primary {
+    background-color: var(--color-accent-600);
+    color: #ffffff;
+  }
+  .btn-primary:hover {
+    background-color: var(--color-accent-700);
+    transform: translateY(-1px);
+  }
+  .btn-outline {
+    background-color: transparent;
+    color: var(--color-navy-900);
+    border-color: var(--color-navy-900);
+  }
+  .btn-outline:hover {
+    background-color: var(--color-navy-900);
+    color: #ffffff;
+  }
+
+  /* ── Card ── */
+  .card {
+    background-color: #ffffff;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--color-border);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .card:hover {
+    box-shadow: 0 8px 24px rgba(11, 42, 102, 0.12);
+  }
+
+  .section-navy {
+    background-color: var(--color-navy-900);
+  }
 }
