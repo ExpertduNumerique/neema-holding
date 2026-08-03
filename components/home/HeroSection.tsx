@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function HeroSection() {
   return (
-    <section className="relative bg-white overflow-hidden pt-12 pb-16 sm:pt-16 sm:pb-24" aria-labelledby="hero-title">
+    <section className="relative bg-white overflow-hidden pt-6 pb-16 sm:pt-8 sm:pb-24" aria-labelledby="hero-title">
       {/* Dégradés décoratifs */}
       <div
         className="absolute -top-32 -right-32 w-[28rem] h-[28rem] rounded-full pointer-events-none"
