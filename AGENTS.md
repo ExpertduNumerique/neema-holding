@@ -35,10 +35,11 @@ Ouagadougou / Koudougou, Burkina Faso) engagé dans le développement
 - Téléphones : (+226) 66 08 18 96 · 70 42 05 66 · 68 73 39 69
 - Facebook : « Neema Holding International »
 
-## 2. Les 6 pôles
+## 2. Les pôles
 
-Chaque pôle a son propre logo (voir §4) et sa propre page. Descriptions
-officielles issues de `brand-source/NEEMA HOLDING INTERNATIONAL.docx` :
+Chaque pôle a son propre logo si disponible (voir §4) et sa propre page.
+Descriptions officielles issues de `brand-source/NEEMA HOLDING
+INTERNATIONAL.docx`, sauf mention contraire :
 
 | Pôle | Slug | Description officielle |
 |---|---|---|
@@ -46,8 +47,9 @@ officielles issues de `brand-source/NEEMA HOLDING INTERNATIONAL.docx` :
 | Neema Agro-Business International | `agro-business` | Production, transformation et commercialisation de produits agricoles afin de renforcer la sécurité alimentaire et créer de la valeur. |
 | Neema Trading | `trading` | Facilitation des échanges commerciaux, import-export et mise en relation de partenaires d'affaires à l'échelle nationale et internationale. |
 | Neema Training | `training` | Formation professionnelle, coaching, développement du leadership et accompagnement des entrepreneurs et des organisations. |
-| Neema Immo | `immo` | Conception, développement et gestion de projets immobiliers répondant aux besoins des particuliers et des entreprises. |
+| Neema Immobilier | `immo` | Conception, développement et gestion de projets immobiliers répondant aux besoins des particuliers et des entreprises. |
 | Neema Store | `store` | Distribution de produits et services de qualité destinés aux professionnels comme aux particuliers. |
+| Neema Transformation | `transformation` | Transformation industrielle et valorisation des matières premières, au service des autres pôles du groupe. Ajouté après la charte graphique officielle — pas de logo dédié pour l'instant, description à valider avec le client. |
 
 Contenu additionnel repéré sur le kakémono (à valider avant publication finale
 — transcription visuelle, pas une source texte) :

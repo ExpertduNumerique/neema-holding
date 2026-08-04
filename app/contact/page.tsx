@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { poles } from "@/lib/poles";
 import { ContactForm } from "@/components/neema/ContactForm";
+import { POLE_ICONS } from "@/components/layout/PoleIcons";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -102,7 +103,13 @@ export default function ContactPage() {
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white text-xs font-semibold text-navy-900 border transition-colors hover:bg-gray-50"
                     style={{ borderColor: "var(--color-border)" }}
                   >
-                    <Image src={p.logo} alt="" width={16} height={16} aria-hidden="true" />
+                    {p.logo ? (
+                      <Image src={p.logo} alt="" width={16} height={16} aria-hidden="true" />
+                    ) : (
+                      <span className="w-4 h-4 [&_svg]:w-4 [&_svg]:h-4" aria-hidden="true">
+                        {POLE_ICONS[p.iconId]}
+                      </span>
+                    )}
                     {p.shortName}
                   </Link>
                 ))}

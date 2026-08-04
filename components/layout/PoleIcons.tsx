@@ -15,6 +15,7 @@ export const POLE_ICON_COLORS: Record<string, { bg: string; color: string }> = {
   store: { bg: "rgba(9,94,43,.1)", color: "#095E2B" },
   groupe: { bg: "rgba(255,255,255,.1)", color: "#94A3B8" },
   equipe: { bg: "rgba(18,161,80,.1)", color: "#12A150" },
+  transformation: { bg: "rgba(26,102,255,.1)", color: "#1A4FA6" },
 };
 
 export const POLE_ICONS: Record<string, ReactNode> = {
@@ -93,6 +94,13 @@ export const POLE_ICONS: Record<string, ReactNode> = {
       <path d="M3 4h2l.6 2.4M5.6 6.4 7.5 14h9.5l2-6.6H6.1M5.6 6.4l1.9 7.6M7.5 14l-.9 3.5h11" />
       <circle cx="9.5" cy="20" r="1" fill="currentColor" stroke="none" />
       <circle cx="16.5" cy="20" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  ),
+  // Transformation — cycle de conversion
+  transformation: (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5" aria-hidden="true">
+      <path d="M20 11A8 8 0 0 0 4.6 8M4 5v3h3" />
+      <path d="M4 13a8 8 0 0 0 15.4 3M20 19v-3h-3" />
     </svg>
   ),
 };

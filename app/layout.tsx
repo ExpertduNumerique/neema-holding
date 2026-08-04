@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Neema Holding International",
   },
   description:
-    "Construire aujourd'hui les solutions qui façonnent l'Afrique de demain. Neema Holding International : Élevage, Agro-Business, Trading, Training, Immo, Store.",
+    "Construire aujourd'hui les solutions qui façonnent l'Afrique de demain. Neema Holding International : Élevage, Agro-Business, Trading, Training, Immobilier, Store, Transformation.",
   authors: [{ name: "Neema Holding International" }],
   creator: "Neema Holding International",
   publisher: "Neema Holding International",

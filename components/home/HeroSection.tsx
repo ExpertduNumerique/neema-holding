@@ -33,7 +33,7 @@ export function HeroSection() {
               <span style={{ color: "#12A150" }}>façonnent l&apos;Afrique de demain</span>.
             </h1>
             <p className="mt-5 text-base sm:text-lg text-gray-600 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-              Neema Holding International réunit six pôles complémentaires au service
+              Neema Holding International réunit plusieurs pôles complémentaires au service
               d&apos;un même objectif : contribuer à la croissance des entreprises,
               accompagner les communautés et favoriser un développement responsable.
             </p>
@@ -65,7 +65,7 @@ export function HeroSection() {
             >
               <Image src="/images/neema/logo_holding.png" alt="" width={40} height={40} aria-hidden="true" />
               <div>
-                <p className="text-sm font-bold text-navy-900 leading-tight">6 pôles d&apos;activité</p>
+                <p className="text-sm font-bold text-navy-900 leading-tight">Plusieurs pôles d&apos;activité</p>
                 <p className="text-xs text-gray-500 leading-tight">Un seul groupe</p>
               </div>
             </div>

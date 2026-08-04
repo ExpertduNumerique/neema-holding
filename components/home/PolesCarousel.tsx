@@ -35,7 +35,7 @@ export function PolesCarousel() {
         <div className="text-center sm:text-left max-w-2xl mx-auto sm:mx-0">
           <h2 className="text-2xl sm:text-3xl font-bold text-navy-900">Nos pôles</h2>
           <p className="mt-3 text-gray-600">
-            Six secteurs complémentaires réunis au sein d&apos;une même vision : contribuer
+            Des secteurs complémentaires réunis au sein d&apos;une même vision : contribuer
             à la croissance des entreprises, accompagner les communautés et favoriser un
             développement responsable.
           </p>

@@ -7,7 +7,7 @@ import { ApproachSection } from "@/components/home/ApproachSection";
 
 export const metadata: Metadata = {
   description:
-    "Construire aujourd'hui les solutions qui façonnent l'Afrique de demain. Découvrez les 6 pôles de Neema Holding International : Élevage, Agro-Business, Trading, Training, Immo, Store.",
+    "Construire aujourd'hui les solutions qui façonnent l'Afrique de demain. Découvrez les pôles de Neema Holding International : Élevage, Agro-Business, Trading, Training, Immobilier, Store, Transformation.",
 };
 
 export default function Home() {

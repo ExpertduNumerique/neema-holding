@@ -7,7 +7,7 @@ function CheckIcon() {
 }
 
 const ITEMS = [
-  { label: "Multisectoriel", detail: "6 pôles d'activité complémentaires" },
+  { label: "Multisectoriel", detail: "Plusieurs pôles d'activité complémentaires" },
   { label: "Ancré en Afrique", detail: "Burkina Faso, ambition internationale" },
   { label: "Impact durable", detail: "innovation, intégrité, excellence" },
   { label: "Une seule vision", detail: "unir les forces, créer la valeur" },

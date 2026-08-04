@@ -1,8 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Pole } from "@/lib/poles";
+import { POLE_ICONS, POLE_ICON_COLORS } from "@/components/layout/PoleIcons";
 
 export function PoleCard({ pole, index }: { pole: Pole; index?: number }) {
+  const colors = POLE_ICON_COLORS[pole.iconId];
+
   return (
     <Link
       href={`/poles/${pole.slug}`}
@@ -17,13 +20,23 @@ export function PoleCard({ pole, index }: { pole: Pole; index?: number }) {
           {String(index + 1).padStart(2, "0")}
         </span>
       )}
-      <Image
-        src={pole.logo}
-        alt={pole.name}
-        width={56}
-        height={56}
-        className="shrink-0"
-      />
+      {pole.logo ? (
+        <Image
+          src={pole.logo}
+          alt={pole.name}
+          width={56}
+          height={56}
+          className="shrink-0"
+        />
+      ) : (
+        <span
+          className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0"
+          style={{ backgroundColor: colors?.bg, color: colors?.color }}
+          aria-hidden="true"
+        >
+          {POLE_ICONS[pole.iconId]}
+        </span>
+      )}
       <h3 className="text-lg font-bold text-navy-900 group-hover:text-accent-700 transition-colors">
         {pole.shortName}
       </h3>

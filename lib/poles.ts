@@ -11,7 +11,8 @@ export interface Pole {
   description: string;
   /** Axes d'activité complémentaires — repérés sur le kakémono officiel, voir AGENTS.md §2. */
   extra: string[];
-  logo: string;
+  /** Optionnel — certains pôles récents n'ont pas encore de logo officiel dédié. */
+  logo?: string;
   iconId: string;
 }
 
@@ -89,6 +90,15 @@ export const poles: Pole[] = [
     ],
     logo: "/images/neema/logo_store.png",
     iconId: "store",
+  },
+  {
+    slug: "transformation",
+    name: "Neema Transformation",
+    shortName: "Transformation",
+    description:
+      "Transformation industrielle et valorisation des matières premières, au service des autres pôles du groupe.",
+    extra: [],
+    iconId: "transformation",
   },
 ];
 

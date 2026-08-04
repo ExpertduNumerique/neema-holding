@@ -16,7 +16,7 @@ export interface NavLink {
   iconId: string;
 }
 
-const PLUS_SLUGS = ["trading", "store"];
+const PLUS_SLUGS = ["trading", "store", "transformation"];
 
 const directPoles = poles.filter((p) => !PLUS_SLUGS.includes(p.slug));
 const plusPoles = poles.filter((p) => PLUS_SLUGS.includes(p.slug));
